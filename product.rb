@@ -3,9 +3,10 @@
 require 'pry'
 
 class Product
-  def initialize(name, price)
+  def initialize(id, name, price)
+    @id = id
     @name = name
     @price = price
   end
-  attr_reader :name, :price
+  attr_reader :id, :name, :price
 end
