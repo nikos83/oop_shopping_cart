@@ -3,6 +3,9 @@
 require 'pry'
 
 class Cart
+  attr_accessor :products_in_cart
+  attr_reader :cart_errors
+
   def initialize
     @products_in_cart = []
     @cart_errors = []
@@ -25,7 +28,4 @@ class Cart
       @cart_errors << 'Item not found in cart'
     end
   end
-
-  attr_accessor :products_in_cart
-  attr_reader :cart_errors
 end
